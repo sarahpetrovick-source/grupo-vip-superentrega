@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>Supermarket Super Entrega - Grupo VIP</title>
+<title>SUPERMARKET Super Entrega - Grupo VIP</title>
 <link href="https://fonts.googleapis.com" rel="preconnect" />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
 <style type="text/css">
@@ -130,8 +130,8 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 2px 12px 4px;
-  gap: 2px;
+  padding: 2px 12px 0px;
+  gap: 0px;
   position: relative;
   min-height: 0;
 }
@@ -143,7 +143,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2px;
-  padding: 4px 0;
+  padding: 4px 0 2px 0;
   text-align: center;
 }
 
@@ -164,17 +164,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 4px;
+  justify-content: flex-end;
+  gap: 2px;
   flex: 1;
-  padding: 2px 0;
+  padding: 0px 0 0px 0;
 }
 
 .sp-left {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: 2px;
   width: 100%;
 }
 
@@ -188,6 +188,7 @@ body {
   background: rgba(255,255,255,.1);
   display: inline-block;
   width: fit-content;
+  margin: 0 auto;
 }
 
 .sp-main-title {
@@ -197,6 +198,7 @@ body {
   color: #ffffff;
   text-shadow: 0 3px 12px rgba(0,0,0,.25);
   text-align: center;
+  width: 100%;
 }
 .sp-main-title .zap {
   color: #E30613;
@@ -216,10 +218,12 @@ body {
 .sp-features-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px 10px;
-  margin-top: 6px;
+  gap: 4px 8px;
+  margin-top: 4px;
   width: 100%;
   max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sp-features-grid .sp-feature {
@@ -230,7 +234,7 @@ body {
   background: rgba(255,255,255,.12);
   border: 1px solid rgba(255,255,255,.2);
   border-radius: 30px;
-  padding: 5px 8px;
+  padding: 4px 8px;
   font-size: 11px;
   font-weight: 700;
   color: rgba(255,255,255,.95);
@@ -255,13 +259,14 @@ body {
   width: clamp(200px, 55vw, 300px);
   line-height: 0;
   margin: 0 auto;
-  margin-bottom: -10px;
+  margin-bottom: -25px;
+  margin-top: -5px;
 }
 
 .sp-right .sussu {
   width: 100%;
   height: auto;
-  max-height: 220px;
+  max-height: 200px;
   object-fit: contain;
   display: block;
   filter: drop-shadow(0 8px 20px rgba(0,0,0,.3));
@@ -269,10 +274,12 @@ body {
 
 /* ===== BOTÃO CTA ===== */
 .sp-cta {
-  padding: 2px 20px 14px;
+  padding: 0px 20px 14px;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 .btn-splash {
   width: 100%;
@@ -296,7 +303,7 @@ body {
   text-align: center; 
   font-size: 10px; 
   color: rgba(255,255,255,.45); 
-  margin-top: 6px; 
+  margin-top: 4px; 
   letter-spacing: 0.5px;
 }
 
@@ -304,59 +311,84 @@ body {
 @media (max-width: 400px) {
   .sp-main-title { font-size: 22px; }
   .sp-features-grid {
-    gap: 4px 6px;
+    gap: 3px 5px;
     max-width: 260px;
   }
   .sp-features-grid .sp-feature {
     font-size: 9px;
-    padding: 4px 6px;
+    padding: 3px 5px;
   }
   .sp-features-grid .sp-feature svg {
     width: 9px;
     height: 9px;
   }
-  .sp-right { width: clamp(160px, 48vw, 210px); }
-  .sp-super-vip-logo { width: clamp(80px, 24vw, 120px); }
+  .sp-right { 
+    width: clamp(150px, 45vw, 200px);
+    margin-bottom: -30px;
+    margin-top: -8px;
+  }
+  .sp-right .sussu { max-height: 150px; }
+  .sp-super-vip-logo { width: clamp(70px, 22vw, 110px); }
   .sp-brand-name { font-size: 16px; }
   .sp-brand-sub { font-size: 9px; }
   .sp-live { font-size: 10px; padding: 3px 12px; }
   .sp-eyebrow { font-size: 10px; padding: 3px 12px; }
   .btn-splash { height: 44px; font-size: 15px; }
-  .sp-note { font-size: 9px; }
+  .sp-note { font-size: 9px; margin-top: 3px; }
   .sp-main-title .zap { text-shadow: 
     -1px -1px 0 #ffffff,
     1px -1px 0 #ffffff,
     -1px 1px 0 #ffffff,
     1px 1px 0 #ffffff; }
-  .sp-right .sussu { max-height: 160px; }
 }
 
 @media (max-height: 700px) {
   .sp-bar { padding: 6px 20px 2px; }
   .sp-logo-vip { height: 36px; }
   .sp-brand-name { font-size: 16px; }
-  .sp-main-title { font-size: 22px; }
+  .sp-main-title { font-size: 20px; }
   .sp-features-grid {
-    gap: 4px 6px;
-    max-width: 240px;
+    gap: 3px 5px;
+    max-width: 230px;
   }
   .sp-features-grid .sp-feature {
-    font-size: 9px;
-    padding: 3px 6px;
+    font-size: 8px;
+    padding: 2px 5px;
   }
-  .sp-right { width: clamp(140px, 42vw, 190px); }
-  .sp-cta { padding: 2px 20px 10px; }
-  .btn-splash { height: 40px; font-size: 14px; }
-  .sp-super-vip-logo { width: clamp(70px, 22vw, 110px); }
-  .sp-eyebrow { font-size: 10px; padding: 3px 10px; }
-  .sp-live { font-size: 10px; padding: 3px 12px; }
-  .sp-note { font-size: 9px; }
+  .sp-right { 
+    width: clamp(130px, 40vw, 180px);
+    margin-bottom: -30px;
+    margin-top: -5px;
+  }
+  .sp-right .sussu { max-height: 130px; }
+  .sp-cta { padding: 0px 20px 8px; }
+  .btn-splash { height: 38px; font-size: 13px; }
+  .sp-super-vip-logo { width: clamp(60px, 20vw, 100px); }
+  .sp-eyebrow { font-size: 9px; padding: 2px 10px; }
+  .sp-live { font-size: 9px; padding: 2px 10px; }
+  .sp-note { font-size: 8px; margin-top: 2px; }
   .sp-main-title .zap { text-shadow: 
     -1px -1px 0 #ffffff,
     1px -1px 0 #ffffff,
     -1px 1px 0 #ffffff,
     1px 1px 0 #ffffff; }
-  .sp-right .sussu { max-height: 150px; }
+  .sp-scene { padding: 0px 10px 0px; }
+  .sp-conteudo { gap: 0px; }
+  .sp-left { gap: 1px; }
+  .sp-features-grid { margin-top: 2px; }
+  .sp-topo { padding: 2px 0 1px 0; }
+}
+
+@media (max-height: 600px) {
+  .sp-right { 
+    width: clamp(110px, 35vw, 150px);
+    margin-bottom: -35px;
+  }
+  .sp-right .sussu { max-height: 100px; }
+  .sp-main-title { font-size: 17px; }
+  .sp-features-grid .sp-feature { font-size: 7px; padding: 2px 4px; }
+  .btn-splash { height: 34px; font-size: 12px; }
+  .sp-super-vip-logo { width: clamp(50px, 18vw, 80px); }
 }
 
 @media (min-height: 800px) {
@@ -372,7 +404,11 @@ body {
     width: 14px;
     height: 14px;
   }
-  .sp-right { width: clamp(240px, 58vw, 320px); }
+  .sp-right { 
+    width: clamp(240px, 58vw, 320px);
+    margin-bottom: -15px;
+  }
+  .sp-right .sussu { max-height: 250px; }
   .sp-super-vip-logo { width: clamp(120px, 32vw, 180px); }
   .sp-main-title { font-size: 34px; }
   .sp-eyebrow { font-size: 13px; padding: 6px 18px; }
@@ -391,7 +427,6 @@ body {
     3px 0 0 #ffffff,
     0 -3px 0 #ffffff,
     0 3px 0 #ffffff; }
-  .sp-right .sussu { max-height: 280px; }
 }
 
 /* ===== HEADER ===== */
@@ -907,7 +942,7 @@ body {
   <!-- BARRA SUPERIOR -->
   <div class="sp-bar">
     <img alt="Logotipo" class="sp-logo-vip" src="https://br-se1.magaluobjects.com/vipc-org-196/files/uploads/LOGO%20SM_6a26b74f1448e.png" />
-    <div class="sp-brand-name">SUPERMERCADO</div>
+    <div class="sp-brand-name">SUPERMARKET</div>
     <div class="sp-brand-sub">SUPER ENTREGA</div>
     <div class="sp-live">VIP OFICIAL</div>
   </div>
@@ -977,7 +1012,7 @@ body {
         <img alt="Logotipo" src="https://br-se1.magaluobjects.com/vipc-org-196/files/uploads/LOGO%20SM_6a26b76c6329c.png" />
       </a>
       <div class="hdr-logo-txt">
-        <div class="hn">SUPERMERCADO</div>
+        <div class="hn">SUPERMARKET</div>
         <div class="hs">Grupo VIP Oficial</div>
       </div>
       <div class="hdr-pill">
@@ -993,7 +1028,7 @@ body {
       <div class="left-header">
         <img alt="Logotipo" class="left-logo-vip" src="https://br-se1.magaluobjects.com/vipc-org-196/files/uploads/LOGO%20SM_6a26b74f1448e.png" />
         <div class="left-brand">
-          <div class="left-brand-name">SUPERMERCADO</div>
+          <div class="left-brand-name">SUPERMARKET</div>
           <div class="left-brand-sub">SUPER ENTREGA</div>
         </div>
         <div class="left-live">VIP OFICIAL</div>
@@ -1091,6 +1126,19 @@ body {
           </span>
           <select id="loja-select">
             <option value="">Selecione uma...</option>
+            <option value="https://pro.meugrupo.vip/c/1supervip">Barra Mandala</option>
+            <option value="https://pro.meugrupo.vip/c/1supervip">Via Parque</option>
+            <option value="https://pro.meugrupo.vip/c/1supervip">Abelardo</option>
+            <option value="https://pro.meugrupo.vip/c/1supervip">Recreio</option>
+            <option value="https://pro.meugrupo.vip/c/2supervip">Terreirão</option>
+            <option value="https://pro.meugrupo.vip/c/2supervip">Pedra de Guaratiba</option>
+            <option value="https://pro.meugrupo.vip/c/2supervip">Magarça</option>
+            <option value="https://pro.meugrupo.vip/c/2supervip">Cachamorra</option>
+            <option value="https://pro.meugrupo.vip/c/3supervip">Tanque</option>
+            <option value="https://pro.meugrupo.vip/c/3supervip">Gardênia</option>
+            <option value="https://pro.meugrupo.vip/c/3supervip">Cascadura</option>
+            <option value="https://pro.meugrupo.vip/c/3supervip">Parada de Lucas</option>
+            <option value="https://pro.meugrupo.vip/c/3supervip">Riachuelo</option>
           </select>
         </div>
       </div>
@@ -1120,13 +1168,13 @@ body {
       <div class="f-brand">
         <img alt="Logotipo" src="https://br-se1.magaluobjects.com/vipc-org-196/files/uploads/LOGO%20SM_6a26b7980409b.png" />
         <div class="f-brand-txt">
-          <div class="fb1">SUPERMERCADO</div>
+          <div class="fb1">SUPERMARKET</div>
           <div class="fb2">Super Entrega · Grupo VIP</div>
         </div>
       </div>
     </div>
     <div class="footer-copy">
-      <b>SUPERMERCADO BARRA OESTE LTDA</b> / CNPJ: 08.719.835/0007-01 / Avenida das Américas 6455 - Barra da Tijuca - RJ
+      <b>SUPERMARKET BARRA OESTE LTDA</b> / CNPJ: 08.719.835/0007-01 / Avenida das Américas 6455 - Barra da Tijuca - RJ
     </div>
   </footer>
 </div>
@@ -1165,25 +1213,6 @@ body {
 
 <script>
 // ============================================================
-// LISTA DE LOJAS
-// ============================================================
-const grupos = [
-  { nome: "Barra Mandala", link: "https://pro.meugrupo.vip/c/1supervip" },
-  { nome: "Via Parque", link: "https://pro.meugrupo.vip/c/1supervip" },
-  { nome: "Abelardo", link: "https://pro.meugrupo.vip/c/1supervip" },
-  { nome: "Recreio", link: "https://pro.meugrupo.vip/c/1supervip" },
-  { nome: "Terreirão", link: "https://pro.meugrupo.vip/c/2supervip" },
-  { nome: "Pedra de Guaratiba", link: "https://pro.meugrupo.vip/c/2supervip" },
-  { nome: "Magarça", link: "https://pro.meugrupo.vip/c/2supervip" },
-  { nome: "Cachamorra", link: "https://pro.meugrupo.vip/c/2supervip" },
-  { nome: "Tanque", link: "https://pro.meugrupo.vip/c/3supervip" },
-  { nome: "Gardênia", link: "https://pro.meugrupo.vip/c/3supervip" },
-  { nome: "Cascadura", link: "https://pro.meugrupo.vip/c/3supervip" },
-  { nome: "Parada de Lucas", link: "https://pro.meugrupo.vip/c/3supervip" },
-  { nome: "Riachuelo", link: "https://pro.meugrupo.vip/c/3supervip" }
-];
-
-// ============================================================
 // FUNÇÃO PARA ROLAR ATÉ O FORMULÁRIO
 // ============================================================
 function scrollToForm() {
@@ -1208,15 +1237,6 @@ function isDesktop() { return window.innerWidth >= 861; }
 // INICIALIZAÇÃO
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
-  // Popula o select com as lojas
-  const sel = document.getElementById('loja-select');
-  grupos.forEach(g => {
-    const o = document.createElement('option');
-    o.value = g.link;
-    o.textContent = g.nome;
-    sel.appendChild(o);
-  });
-  
   // Popula o modal com canais oficiais
   const chList = document.getElementById('ch-list');
   const canais = [
@@ -1237,7 +1257,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const wppDiv = document.createElement('div');
   wppDiv.className = 'ch-card no-link';
   wppDiv.style.cursor = 'default';
-  wppDiv.innerHTML = '<div class="ch-ico wpp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div class="ch-lbl"><div class="ch-type">Grupo VIP Oficial</div><div class="ch-val">Grupo VIP Supermarket</div></div>';
+  wppDiv.innerHTML = '<div class="ch-ico wpp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div class="ch-lbl"><div class="ch-type">Grupo VIP Oficial</div><div class="ch-val">Grupo VIP SUPERMARKET</div></div>';
   chList.appendChild(wppDiv);
   
   if (isDesktop()) {
